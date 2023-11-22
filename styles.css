@@ -1,0 +1,199 @@
+:root {
+    --primary-color: #000000;
+    --secondary-color: #FFFFFF;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
+    position: fixed;
+    top: 0; /* Make sure the navbar starts at the top of the page */
+    left: 0; /* Align to the left */
+    width: 100%; /* Ensure it spans the full width of the page */
+    background: var(--secondary-color); /* Solid background color */
+    z-index: 10;
+}
+
+#navbar {
+    display: flex;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: var(--primary-color);
+    margin-left: 2rem;
+}
+
+#navbar a:hover {
+    /* Styles for hover effect */
+}
+
+.section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+#home {
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 8rem 1rem 2rem 1rem;
+}
+
+#home .visualization-placeholder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#home h1,
+#home p {
+    position: absolute;
+    left: 2rem;
+    z-index: 5;
+}
+
+#home h1 {
+    bottom: 25%;
+    font-size: 3.5rem;
+}
+
+#home p {
+    bottom: 20%;
+    font-size: 2.5rem;
+}
+
+#logo {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 10;
+}
+
+#logo a.home-link {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+#logo a.home-link:hover {
+    /* Styles for hover effect */
+}
+
+#scrollIndicator {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    z-index: 5;
+    width: 30px;
+    height: 30px;
+    background-color: var(--primary-color);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    background: var(--secondary-color);
+  }
+  
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+}
+
+.image-placeholder,
+.text-blob {
+    border: 1px solid #000;
+    width: 48%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.image-placeholder {
+    margin-right: 2%;
+}
+
+.text-blob {
+    margin-left: 2%;
+}
+
+.contact-list {
+    list-style-type: none;
+    padding: 0;
+}
+  
+.contact-list li {
+    margin-bottom: 1rem;
+}
+  
+.contact-list a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+  
+.contact-list a:hover {
+    text-decoration: underline;
+}
+
+.experience-section, .projects-section {
+    width: 48%; /* Adjust as necessary, ensuring they fit side by side */
+}
+
+.experience-item, .project-item {
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .image-placeholder,
+    .text-blob {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .experience-section, .projects-section {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1024px) {
+    header {
+        padding: 1.5rem 3rem;
+    }
+
+    #home h1,
+    #home p {
+        margin-left: 3rem;
+    }
+
+    #navbar {
+        justify-content: flex-end;
+    }
+
+    #navbar a {
+        margin-left: 2rem;
+    }
+}
