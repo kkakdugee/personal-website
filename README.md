@@ -1,7 +1,7 @@
 # My Wesbite
 
 ## Description
-This is my portfolio website created with HTML, CSS, JavaScript, Three.js, and FullPage.js.
+This is my portfolio website, created using HTML, CSS, JavaScript, Three.js, and FullPage.js, and is hosted on AWS S3 buckets.
 
 View it here: [aarony.kim](https://aarony.kim/)
 
