@@ -4,88 +4,138 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aaron Kim</title>
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.css">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://unpkg.com/three@latest/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@latest/examples/jsm/"
+          }
+        }
+    </script>
 
-<header>
-    <div id="logo">
-        <a href="#home" class="home-link">Brain Icon/Logo</a>
-    </div>
-    <nav id="navbar">
-        <a href="#about">About Me</a>
-        <a href="#experience-projects">Experience/Projects</a>
-        <a href="#contact">Contact Me</a>
-    </nav>
-    <div id="scrollIndicator">Scroll indicator</div>
-</header>
-
-<main>
-    <section id="home" class="section">
-        <!-- Placeholder for future animation -->
-        <div id="main-visual">
-
+    <header id="header">
+        <div class="home-button">
+            <a href="#home"><img src="./images/home.png" alt="Home" class="resize-image-big"></a>
         </div>
-        <h1>Aaron Kim</h1>
-        <p>Student, Software Developer</p>
-    </section>
-
-    <section id="about" class="section">
-        <div class="container">
-            <div class="image-placeholder">
-                <!-- Placeholder for future image -->
-                <p>placeholder image</p>
-            </div>
-            <div class="text-blob">
-                <!-- Placeholder text for future content -->
-                <p>text blob for me to explain myself</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience-projects" class="section">
-        <div class="container">
-            <div class="experience-section">
-                <h2>Experience</h2>
-                <!-- Content for experience goes here -->
-                <!-- Example: -->
-                <div class="experience-item">
-                    <h3>Job Title at Company</h3>
-                    <p>Description of your role and responsibilities.</p>
-                </div>
-                <!-- Repeat for other experience items -->
-            </div>
+        <nav id="navbar">
+            <a href="#about">About Me</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a></li>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
     
-            <div class="projects-section">
-                <h2>Projects</h2>
-                <!-- Content for projects goes here -->
-                <!-- Example: -->
-                <div class="project-item">
-                    <h3>Project Name</h3>
-                    <p>Brief description of the project.</p>
-                    <!-- Optionally, add a link or image preview -->
-                </div>
-                <!-- Repeat for other project items -->
+    <div id="model-container"></div>
+
+    <div id="fullpage">
+        <section class="section first-section" data-anchor="home">
+            <div class="home-content">
+                <h1>Aaron Kim</h1>
+                <p>Student & Software Engineer</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact Information</h2>
-            <ul class="contact-list">
-              <li>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></li>
-              <li>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></li>
-              <li>LinkedIn: <a href="https://linkedin.com/in/yourusername" target="_blank">linkedin.com/in/yourusername</a></li>
-            </ul>
-          </div>
-    </section>
-</main>
+        <section class="section" data-anchor="about">
+            <div class="about-container">
+                <div class="about-image">
+                    <!-- Image of yourself here -->
+                </div>
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>Hi! I'm Aaron, a Korean-American from Cypress, Texas. Currently, I am a sophomore at Texas A&M University, majoring in Electronic Systems with a Minor in Computer Science. I have a growing interest in software engineering, artificial intelligence, and computational neuroscience.</p>
+                </div>
+            </div>
+        </section>
 
-<footer>
-    <p>© 2023 Aaron Kim. All rights reserved.</p>
-</footer>
+        <section class="section" data-anchor="experience">
+            <div class="experience-container">
+                <h2>Professional Experience</h2>
+                <div class="timeline">
+                    <ul>
+                        <li>
+                            <img src="./images/cse dept.jpg" alt="TAMU CSE Dept. Logo" class="resize-image-small">
+                            <span>Sep. 2023 - Present</span>
+                            <div class="content">
+                                <h3>Brain Networks Laboratory, Texas A&M University</h3>
+                                <h4>Undergradute Research Assistant</h4>
+                                <p>Optimizing a biologically motivated Convolutional Neural Network.</p>
+                                <p>Technologies: Python, PyTorch</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/nswc crane.jpg" alt="NSWC Crane Logo" class="resize-image-small">
+                            <span>Aug. 2023 - Present</span>
+                            <div class="content">
+                                <h3>Naval Surface Warfare Center, Crane Division</h3>
+                                <h4>Software Engineer Co-op</h4>
+                                <p>Continuing the development and enhancement of a Natural Language Processing-powered software tool.</p>
+                                <p>Technologies: Python, Streamlit, Matplotlib, Batch Script</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/dod.jpg" alt="DoD Logo" class="resize-image-small">
+                            <span>Jun. 2023 - Aug. 2023</span>
+                            <div class="content">
+                                <h3>U.S. Department of Defense - National Security Innovation Network</h3>
+                                <h4>Software/Machine Learning Intern - X-Force Fellow</h4>
+                                <p>Co-developed a tool incorporating an NLP model and data visualizations.</p>
+                                <p>Technologies: Python, Streamlit, Matplotlib, Batch Script, Scopus API</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-<script src="script.js"></script>
+        <section class="section" data-anchor="projects">
+            <div class="project-container">
+                <h2>Projects</h2>
+                <div class="project-row">
+                    <div class="project-entry">
+                        <h3>img2voxel</h3>
+                        <p>Developing an application incorporating a Neural Network to generate 3D representations of 2D images.</p>
+                        <p>Technologies: HTML, CSS, JavaScript, Python, PyTorch, Blender API</p>
+                    </div>
+                    <div class="project-entry">
+                        <h3><a href="https://github.com/kkakdugee/frame-interpolation" target="_blank">Frame Interpolation</a></h3>
+                        <p>A convolutional neural network to upscale a video's FPS.</p>
+                        <p>Technologies: Python, PyTorch, OpenCV, CUDA</p>
+                    </div>
+                </div>
+                <div class="project-row">
+                    <div class="project-entry">
+                        <h3><a href="https://github.com/kkakdugee/AUBot" target="_blank">AmogusBot</a></h3>
+                        <p>An event-driven Discord Bot capable of sending and voicing Among-Us related memes.</p>
+                        <p>Technologies: Node.js, Linux, Raspberry Pi, Tenor API, Discord API</p>
+                    </div>
+                    <div class="project-entry">
+                        <h3><a href="https://github.com/kkakdugee" target="_blank">GitHub</a></h3>
+                        <p>More projects on my GitHub!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" data-anchor="contact">
+            <div class="contact-container">
+                <h2>Contact</h2>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/aarkim" target="_blank"><img src="./images/linkedin.png" alt="LinkedIn" class="resize-image-small"></a>
+                    <a href="https://github.com/kkakdugee" target="_blank"><img src="./images/github.png" alt="GitHub" class="resize-image-small"></a>
+                    <a id="email" href="" target="_blank"><img src="./images/email.png" alt="Email" class="resize-image-small"></a>
+                </div>
+                <p>&copy; 2023 Aaron Kim</p>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>
